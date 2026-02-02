@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Rudra Digital - Simple websites for local businesses</title>
+    <meta name="description" content="Rudra Digital creates simple, clean, one-page websites designed to help local businesses be easily contacted online. No clutter, just results." />
+    <meta name="keywords" content="single page website, local business website, simple web design, contact page design, Rudra Digital, affordable websites, UK web design" />
+    <meta name="author" content="Rudra Digital" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rudradigital.uk/" />
+    <meta property="og:title" content="Rudra Digital - Simple websites for local businesses" />
+    <meta property="og:description" content="Clean, one-page websites designed to help local businesses be easily contacted online." />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rudradigital.uk/" />
+    <meta property="twitter:title" content="Rudra Digital - Simple websites for local businesses" />
+    <meta property="twitter:description" content="Clean, one-page websites designed to help local businesses be easily contacted online." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              rudra: {
+                bg: '#F8F7F4',              // Off-white/Cream background
+                'bg-secondary': '#EFEEEB',  // Slightly darker for sections
+                text: '#3D4F5F',             // Dark charcoal - primary text
+                'text-muted': '#6B7B8A',     // Muted text
+                accent: '#5B8A9A',           // Teal - buttons, links, accents
+                'accent-hover': '#4A7585',   // Darker teal for hover
+              }
+            },
+            animation: {
+              'fadeSlideIn': 'fadeSlideIn 0.6s ease-out forwards',
+            },
+            keyframes: {
+              fadeSlideIn: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Ensure sticky header doesn't overlap anchor targets */
+      section {
+        scroll-margin-top: 90px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-rudra-bg text-rudra-text antialiased selection:bg-rudra-accent selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
