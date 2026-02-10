@@ -96,6 +96,22 @@ export const Header: React.FC = () => {
               For Whom
             </a>
             <a
+              href="#pricing"
+              className="text-base font-medium text-rudra-text-muted hover:text-rudra-accent transition-colors"
+              aria-label="Scroll to Pricing section"
+              onClick={handleNavClick}
+            >
+              Pricing
+            </a>
+            <a
+              href="#portfolio"
+              className="text-base font-medium text-rudra-text-muted hover:text-rudra-accent transition-colors"
+              aria-label="Scroll to Portfolio section"
+              onClick={handleNavClick}
+            >
+              Portfolio
+            </a>
+            <a
               href="#how-it-works"
               className="text-base font-medium text-rudra-text-muted hover:text-rudra-accent transition-colors"
               aria-label="Scroll to Process section"
@@ -166,6 +182,22 @@ export const Header: React.FC = () => {
                     aria-label="Scroll to Audience section"
                   >
                     <span className="ml-3 text-base font-medium text-rudra-text">For Whom</span>
+                  </a>
+                  <a
+                    href="#pricing"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-rudra-bg-secondary"
+                    onClick={handleNavClick}
+                    aria-label="Scroll to Pricing section"
+                  >
+                    <span className="ml-3 text-base font-medium text-rudra-text">Pricing</span>
+                  </a>
+                  <a
+                    href="#portfolio"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-rudra-bg-secondary"
+                    onClick={handleNavClick}
+                    aria-label="Scroll to Portfolio section"
+                  >
+                    <span className="ml-3 text-base font-medium text-rudra-text">Portfolio</span>
                   </a>
                   <a
                     href="#how-it-works"
