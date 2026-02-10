@@ -7,9 +7,9 @@
     <!-- SEO Meta Tags -->
     <title>Rudra Digital - Simple websites for local businesses</title>
     <meta name="description" content="Rudra Digital creates simple, clean, one-page websites designed to help local businesses be easily contacted online. No clutter, just results." />
-    <meta name="keywords" content="single page website, local business website, simple web design, contact page design, Rudra Digital, affordable websites, UK web design" />
     <meta name="author" content="Rudra Digital" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://rudradigital.uk/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -23,19 +23,36 @@
     <meta property="twitter:title" content="Rudra Digital - Simple websites for local businesses" />
     <meta property="twitter:description" content="Clean, one-page websites designed to help local businesses be easily contacted online." />
 
-    <!-- LocalBusiness Structured Data -->
+    <!-- Structured Data — WebDesignAgency (LocalBusiness subtype) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "ProfessionalService",
+      "additionalType": "https://schema.org/WebDesignAgency",
       "name": "Rudra Digital",
-      "description": "Custom-built websites for local UK businesses",
+      "description": "Custom-built websites for local UK businesses. Simple, clean designs that help you get found and contacted online.",
       "url": "https://rudradigital.uk",
       "email": "contact@rudradigital.uk",
       "telephone": "+447449938510",
-      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
       "priceRange": "££",
-      "serviceType": "Web Design"
+      "serviceType": ["Web Design", "SEO", "Website Development"],
+      "knowsLanguage": "en",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ]
     }
     </script>
 
