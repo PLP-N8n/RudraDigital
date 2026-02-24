@@ -5,14 +5,14 @@ import { Button } from './Button';
 const packages = [
   {
     name: 'Starter',
-    price: '£499',
+    price: '£299',
     bestFor: 'Best for new businesses needing a simple online presence',
     features: [
-      '1–3 pages',
-      'Mobile-optimised design',
-      'Contact form + Google Maps',
+      '1-page website',
+      'Mobile-responsive design',
+      'Contact form',
       'Basic SEO setup',
-      'WhatsApp / Call CTA',
+      'Google Maps embed',
       '1 revision round',
       'Delivered in 5–7 days',
     ],
@@ -20,15 +20,14 @@ const packages = [
   },
   {
     name: 'Professional',
-    price: '£999',
+    price: '£599',
     bestFor: 'Best for growing businesses wanting a polished, full-featured site',
     features: [
-      '5–7 pages',
+      'Up to 5 pages',
       'Custom design & layout',
       'Full SEO optimisation',
       'Google Business Profile setup',
-      'Social media integration',
-      'Booking / appointment link',
+      'Booking link integration',
       '2 revision rounds',
       'Delivered in 10–14 days',
     ],
@@ -36,16 +35,15 @@ const packages = [
   },
   {
     name: 'Growth',
-    price: '£1,999',
+    price: '£999',
     bestFor: 'Best for established businesses ready to scale online',
     features: [
-      '8–12 pages',
-      'Custom design + copywriting',
-      'Advanced SEO + blog setup',
+      'Up to 10 pages',
+      'Custom copywriting',
+      'Blog setup',
       'Newsletter integration',
       'Analytics dashboard',
-      'Lead capture forms',
-      '3 revision rounds',
+      'Unlimited revisions',
       'Delivered in 14–21 days',
       '1 month free maintenance',
     ],
@@ -54,9 +52,8 @@ const packages = [
 ];
 
 const addOns = [
-  { name: 'Monthly Maintenance', price: '£49/mo' },
-  { name: 'SEO & Content Updates', price: '£99/mo' },
-  { name: 'Priority Support', price: '£29/mo' },
+  { name: 'Monthly Maintenance', price: '£39/mo' },
+  { name: 'SEO & Content Updates', price: '£79/mo' },
 ];
 
 export const Pricing: React.FC = () => {
@@ -121,8 +118,8 @@ export const Pricing: React.FC = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-lg font-semibold text-rudra-text mb-6">Monthly Retainer Add-Ons</h3>
-          <div className="inline-grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <h3 className="text-lg font-semibold text-rudra-text mb-6">Monthly Add-Ons</h3>
+          <div className="inline-grid grid-cols-1 sm:grid-cols-2 gap-6">
             {addOns.map((addOn, index) => (
               <div
                 key={addOn.name}
@@ -135,6 +132,10 @@ export const Pricing: React.FC = () => {
             ))}
           </div>
         </div>
+
+        <p className="mt-8 text-sm text-rudra-text-muted text-center">
+          All prices exclude VAT. Hosting included on fast CDN. Domain registration from £10/year.
+        </p>
       </div>
     </section>
   );

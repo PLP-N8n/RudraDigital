@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CentralFlow Plumbing & Heating — Grangemouth, Falkirk & Central Scotland</title>
+  <meta name="description" content="CentralFlow Plumbing & Heating — trusted local plumbers serving Grangemouth, Falkirk & Central Scotland. Gas Safe registered. No call-out fee. 24/7 emergency service." />
+  <meta name="keywords" content="plumber, plumbing, heating, boiler, gas safe, Grangemouth, Falkirk, Central Scotland, emergency plumber" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trades-demo.rudradigital.uk/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CentralFlow Plumbing & Heating — Grangemouth, Falkirk & Central Scotland" />
+  <meta property="og:description" content="Trusted local plumbers. Gas Safe registered. No call-out fee. 24/7 emergency service." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://trades-demo.rudradigital.uk/" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN with custom config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            'trade-bg': '#FFFFFF',
+            'trade-light': '#F5F7FA',
+            'trade-navy': '#1B2A4A',
+            'trade-navy-dark': '#0F1B33',
+            'trade-orange': '#E8652B',
+            'trade-orange-hover': '#D4571F',
+            'trade-text': '#1B2A4A',
+            'trade-text-muted': '#6B7B8A',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    section[id] {
+      scroll-margin-top: 90px;
+    }
+  </style>
+
+  <!-- LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "CentralFlow Plumbing & Heating",
+    "description": "Trusted local plumbers serving Grangemouth, Falkirk & Central Scotland. Gas Safe registered. No call-out fee. 24/7 emergency service.",
+    "url": "https://trades-demo.rudradigital.uk/",
+    "telephone": "+441234567890",
+    "areaServed": [
+      "Grangemouth",
+      "Falkirk",
+      "Stirling",
+      "Bo'ness",
+      "Linlithgow",
+      "Central Scotland"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Grangemouth",
+      "addressRegion": "Falkirk",
+      "addressCountry": "GB"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Plumbing & Heating Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Boiler Installation & Repair" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Plumbing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Installation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Central Heating" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gas Safety Checks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leaks & Repairs" } }
+      ]
+    },
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  }
+  </script>
+</head>
+<body class="font-sans text-trade-text antialiased">
+  <div id="root"></div>
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+</html>

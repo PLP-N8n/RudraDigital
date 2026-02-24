@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Your Free Quote — Rudra Digital</title>
+    <meta name="description" content="Get an instant website quote for your local business. Answer a few questions and see your personalised price — no obligation, no pressure." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://quote.rudradigital.uk/" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              rudra: {
+                bg: '#F8F7F4',
+                'bg-secondary': '#EFEEEB',
+                text: '#3D4F5F',
+                'text-muted': '#6B7B8A',
+                accent: '#5B8A9A',
+                'accent-hover': '#4A7585',
+              }
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-rudra-bg text-rudra-text antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

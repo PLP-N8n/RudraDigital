@@ -1,20 +1,24 @@
 import React from 'react';
+import { MessageCircle, Code, Rocket } from 'lucide-react';
 
 const steps = [
   {
     id: '01',
-    name: 'Brief Discussion',
-    description: 'We have a quick chat to understand your business and what key information your customers need.',
+    name: 'Free Consultation',
+    description: 'Tell us about your business and what you need. We\'ll recommend the best approach — no jargon, no pressure, no obligation.',
+    icon: MessageCircle,
   },
   {
     id: '02',
     name: 'Design & Build',
-    description: 'We create a clean, professional single-page site tailored to your brand identity.',
+    description: 'We create your website and send you a preview link. You review it, give feedback, and we revise until you love it.',
+    icon: Code,
   },
   {
     id: '03',
-    name: 'Launch',
-    description: 'Your site goes live. We ensure everything works perfectly so you can start sharing your link immediately.',
+    name: 'Launch & Support',
+    description: 'We go live, set up your Google listing, and hand everything over. Need changes later? We\'re always here to help.',
+    icon: Rocket,
   },
 ];
 
@@ -24,15 +28,14 @@ export const HowItWorks: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center mb-16">
           <h2 className="text-3xl font-extrabold text-rudra-text sm:text-4xl">
-            How it works
+            How It Works
           </h2>
           <p className="mt-4 max-w-2xl text-xl text-rudra-text-muted lg:mx-auto">
-            Simple steps to get your business online.
+            Three simple steps to get your business online.
           </p>
         </div>
 
         <div className="relative">
-          {/* Connecting line for desktop */}
           <div className="hidden md:block absolute top-12 left-10 right-10 h-0.5 bg-rudra-text/10" aria-hidden="true" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
@@ -42,8 +45,8 @@ export const HowItWorks: React.FC = () => {
                 className="relative flex flex-col items-center text-center animate-fadeSlideIn"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-white border-2 border-rudra-accent text-2xl font-bold text-rudra-accent z-10 mb-6">
-                  {step.id}
+                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-white border-2 border-rudra-accent z-10 mb-6">
+                  <step.icon className="w-10 h-10 text-rudra-accent" />
                 </div>
                 <h3 className="text-xl font-bold text-rudra-text mb-2">{step.name}</h3>
                 <p className="text-rudra-text-muted leading-relaxed">

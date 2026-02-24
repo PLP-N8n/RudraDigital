@@ -3,22 +3,22 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    name: 'Global Telecom',
+    name: 'Glow Hair Studio',
     description:
-      'A modern, responsive website for a telecommunications company, featuring clean navigation, service breakdowns, and a contact-driven layout.',
-    tags: ['Responsive', 'Custom Design', 'SEO'],
-    url: 'https://global-telecom-panipat.com/',
-    video: '/Global_Telecom.mp4',
-    domain: 'global-telecom-panipat.com',
+      'A warm, elegant website for a women\'s hair salon — mobile-first with online booking, services & pricing, client reviews, and click-to-call.',
+    tags: ['Responsive', 'Booking-Ready', 'Local SEO'],
+    url: 'https://salon-demo.rudradigital.uk/',
+    domain: 'salon-demo.rudradigital.uk',
+    video: '/HairDresser.mp4',
   },
   {
-    name: 'Open Adjudication',
+    name: 'CentralFlow Plumbing',
     description:
-      'A clean, professional platform for an adjudication service, with clear information architecture and an accessible, trust-building design.',
-    tags: ['Responsive', 'Accessible', 'Professional'],
-    url: 'https://openadjudication.org/',
-    video: '/Open_Adju.mp4',
-    domain: 'openadjudication.org',
+      'A professional, trust-building website for a local plumber — featuring 24/7 emergency callout, Gas Safe credentials, free quote form, and click-to-call.',
+    tags: ['Responsive', 'Click-to-Call', 'Trust Signals'],
+    url: 'https://trades-demo.rudradigital.uk/',
+    domain: 'trades-demo.rudradigital.uk',
+    video: '/Plumber.mp4',
   },
   {
     name: 'Pure Living Pro',
@@ -26,8 +26,17 @@ const projects = [
       'A sleek website for a professional cleaning company, showcasing services, pricing, and easy booking with a fresh, modern aesthetic.',
     tags: ['Responsive', 'Booking Integration', 'Modern'],
     url: 'https://www.purelivingpro.co.uk/',
-    video: '/PLP.mp4',
     domain: 'purelivingpro.co.uk',
+    video: '/PLP.mp4',
+  },
+  {
+    name: 'Global Telecom',
+    description:
+      'A corporate website for a telecoms provider — clean layout with service breakdowns, coverage areas, and business enquiry forms.',
+    tags: ['Corporate', 'Responsive', 'Multi-Page'],
+    url: 'https://www.globaltelecom.co.uk/',
+    domain: 'globaltelecom.co.uk',
+    video: '/Global_Telecom.mp4',
   },
 ];
 
@@ -45,14 +54,14 @@ export const Portfolio: React.FC = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
           {projects.map((project, index) => (
             <div
               key={project.name}
               className="bg-white rounded-2xl border border-rudra-text/10 shadow-sm overflow-hidden animate-fadeSlideIn"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Browser mockup placeholder */}
+              {/* Browser mockup with video preview */}
               <div className="bg-rudra-bg-secondary border-b border-rudra-text/10">
                 <div className="flex items-center gap-2 px-4 py-3">
                   <div className="flex gap-1.5">
@@ -66,20 +75,20 @@ export const Portfolio: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="aspect-video bg-rudra-bg">
+                <div className="aspect-video bg-rudra-bg overflow-hidden">
                   <video
-                    className="w-full h-full object-cover"
+                    src={project.video}
                     autoPlay
-                    muted
                     loop
+                    muted
                     playsInline
-                  >
-                    <source src={project.video} type="video/mp4" />
-                  </video>
+                    className="w-full h-full object-cover object-top"
+                    aria-label={`Preview of ${project.name} website`}
+                  />
                 </div>
               </div>
 
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <h3 className="text-xl font-bold text-rudra-text">{project.name}</h3>
                 <p className="mt-2 text-base text-rudra-text-muted">{project.description}</p>
 
@@ -94,17 +103,15 @@ export const Portfolio: React.FC = () => {
                   ))}
                 </div>
 
-                {project.url && project.url !== '#' && (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center text-rudra-accent hover:text-rudra-accent-hover font-medium transition-colors"
-                  >
-                    View Live Site
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                )}
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-rudra-accent text-white rounded-lg hover:bg-rudra-accent-hover transition-colors text-sm font-medium"
+                >
+                  View Live Site
+                  <ExternalLink className="h-4 w-4" />
+                </a>
               </div>
             </div>
           ))}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Hair Studio — Women's Hair Salon in Falkirk</title>
+    <meta name="description" content="Glow Hair Studio is Falkirk's premier women's hair salon offering cuts, colour, highlights, treatments and bridal styling. Book your appointment today." />
+    <meta name="keywords" content="hair salon Falkirk, women's hairdresser, balayage, highlights, bridal hair, colour, cut and blow dry" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://salon-demo.rudradigital.uk/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Glow Hair Studio — Women's Hair Salon in Falkirk" />
+    <meta property="og:description" content="Cuts, colour & styling in the heart of Falkirk. Book your appointment today." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://salon-demo.rudradigital.uk/" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CDN with custom config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'salon-bg': '#FFF8F5',
+              'salon-bg-alt': '#FFF0EB',
+              'salon-text': '#2D2D2D',
+              'salon-text-muted': '#6B6B6B',
+              'salon-accent': '#D4A0A0',
+              'salon-accent-hover': '#C08080',
+              'salon-gold': '#C5A55A',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              playfair: ['"Playfair Display"', 'serif'],
+            },
+          },
+        },
+      }
+    </script>
+
+    <style>
+      section[id] {
+        scroll-margin-top: 90px;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out both;
+      }
+      .animate-fade-in-up-delay {
+        animation: fadeInUp 0.8s ease-out 0.2s both;
+      }
+      .animate-fade-in-up-delay-2 {
+        animation: fadeInUp 0.8s ease-out 0.4s both;
+      }
+    </style>
+
+    <!-- LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Glow Hair Studio",
+        "description": "Women's hair salon in Falkirk offering cuts, colour, highlights, treatments and bridal styling.",
+        "url": "https://salon-demo.rudradigital.uk/",
+        "telephone": "+441234567890",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 High Street",
+          "addressLocality": "Falkirk",
+          "postalCode": "FK1 1AA",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 56.0019,
+          "longitude": -3.7839
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ],
+        "priceRange": "££",
+        "image": "",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "127"
+        }
+      }
+    </script>
+  </head>
+  <body class="font-sans text-salon-text bg-salon-bg">
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>

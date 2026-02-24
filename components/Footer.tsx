@@ -1,28 +1,76 @@
 import React from 'react';
 
-export const Footer: React.FC = () => {
+const quickLinks = [
+  { label: 'What We Do', href: '#services' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'Our Work', href: '#portfolio' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Contact', href: '#contact' },
+];
+
+interface FooterProps {
+  onOpenPrivacy: () => void;
+  onOpenTerms: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) => {
   return (
-    <footer className="bg-rudra-bg py-12 border-t border-rudra-text/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-        <div className="mb-4 md:mb-0 flex items-center gap-4">
-          <img
-            src="/Logo.png"
-            alt="Rudra Digital"
-            className="h-8 w-auto"
-          />
+    <footer className="bg-gray-900 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Brand */}
           <div>
-            <p className="text-sm text-rudra-text-muted">
-              &copy; {new Date().getFullYear()} Rudra Digital. All rights reserved.
-            </p>
+            <h3 className="text-xl font-bold text-white">Rudra Digital</h3>
+            <p className="text-gray-400 mt-2">Based in Central Scotland</p>
+            <a href="tel:+447449938510" className="text-gray-300 hover:text-white transition-colors block mt-2">
+              07449 938510
+            </a>
+            <a href="mailto:contact@rudradigital.uk" className="text-gray-300 hover:text-white transition-colors block mt-1">
+              contact@rudradigital.uk
+            </a>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <nav className="space-y-2">
+              {quickLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-gray-400 hover:text-white transition-colors block"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">Legal</h4>
+            <nav className="space-y-2">
+              <button
+                onClick={onOpenPrivacy}
+                className="text-gray-400 hover:text-white transition-colors block"
+              >
+                Privacy Policy
+              </button>
+              <button
+                onClick={onOpenTerms}
+                className="text-gray-400 hover:text-white transition-colors block"
+              >
+                Terms of Service
+              </button>
+            </nav>
+            <p className="text-gray-500 text-sm mt-6">Website by Rudra Digital</p>
           </div>
         </div>
-        <div className="flex space-x-6">
-          <a href="/privacy" className="text-rudra-text-muted hover:text-rudra-accent transition-colors">
-            Privacy
-          </a>
-          <a href="/terms" className="text-rudra-text-muted hover:text-rudra-accent transition-colors">
-            Terms
-          </a>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} Rudra Digital. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

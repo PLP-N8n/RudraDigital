@@ -1,21 +1,26 @@
 import React from 'react';
-import { Smartphone, Layout, UserCheck } from 'lucide-react';
+import { Layout, Smartphone, Search, Headphones } from 'lucide-react';
 
-const features = [
+const services = [
   {
-    name: 'Single Page Design',
-    description: 'Everything your customers need to know on one clear, concise page. No complex navigation or confusing menus.',
+    name: 'Website Design',
+    description: 'A clean, professional site that represents your business online. Built from scratch, tailored to your brand.',
     icon: Layout,
   },
   {
-    name: 'Mobile Optimized',
-    description: 'Your site will look perfect on every device, ensuring customers on-the-go can easily read and contact you.',
+    name: 'Mobile Optimisation',
+    description: 'Your site looks perfect on every phone, tablet, and desktop. Over 60% of your customers browse on mobile.',
     icon: Smartphone,
   },
   {
-    name: 'Contact Focused',
-    description: 'Designed with one goal in mind: helping new clients call, message, or email you effortlessly.',
-    icon: UserCheck,
+    name: 'Local SEO',
+    description: 'Help customers in your area find you on Google. We set up your Google Business profile and optimise for local search.',
+    icon: Search,
+  },
+  {
+    name: 'Ongoing Support',
+    description: 'Updates, changes, and maintenance whenever you need it. We\'re always just a message away.',
+    icon: Headphones,
   },
 ];
 
@@ -25,33 +30,31 @@ export const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-rudra-text sm:text-4xl">
-            What we offer
+            What We Do
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-rudra-text-muted">
-            We focus on the essentials to get you online quickly and effectively.
+            Everything you need to get found and get booked.
           </p>
         </div>
 
         <div className="mt-16">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {services.map((service, index) => (
               <div
-                key={feature.name}
+                key={service.name}
                 className="pt-6 animate-fadeSlideIn"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flow-root bg-white rounded-lg px-6 pb-8 h-full border border-rudra-text/10 shadow-sm">
                   <div className="-mt-6">
-                    <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-rudra-accent rounded-md">
-                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                      </span>
-                    </div>
+                    <span className="inline-flex items-center justify-center p-3 bg-rudra-accent rounded-md">
+                      <service.icon className="h-6 w-6 text-white" />
+                    </span>
                     <h3 className="mt-8 text-lg font-medium text-rudra-text tracking-tight">
-                      {feature.name}
+                      {service.name}
                     </h3>
                     <p className="mt-5 text-base text-rudra-text-muted">
-                      {feature.description}
+                      {service.description}
                     </p>
                   </div>
                 </div>
